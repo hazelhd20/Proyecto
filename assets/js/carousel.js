@@ -246,10 +246,10 @@ function initCarousel(carouselId, slideContainerId, backButtonId, forwardButtonI
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     autoplayCarousel();
-    initCarousel('blog-carousel', 'blog-slide-container', 'blog-back-button', 'blog-forward-button', 30);
+    initCarousel('blog', 'blog-slide-container', 'blog-back-button', 'blog-forward-button', 30);
   });
 } else {
   // DOM ya está cargado
   autoplayCarousel();
-  initCarousel('blog-carousel', 'blog-slide-container', 'blog-back-button', 'blog-forward-button', 30);
+  initCarousel('blog', 'blog-slide-container', 'blog-back-button', 'blog-forward-button', 30);
 }
