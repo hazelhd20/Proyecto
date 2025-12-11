@@ -118,4 +118,30 @@ $(function () {
             closeModal();
         }
     });
+
+    // Scroll to top button
+    const $scrollTopBtn = $("#scroll-top-btn");
+
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 300) {
+            $scrollTopBtn.addClass("show");
+        } else {
+            $scrollTopBtn.removeClass("show");
+        }
+    });
+
+    $scrollTopBtn.on("click", function (event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, 600);
+    });
+
+    // Abrir/cerrar menú móvil
+    $("#menu-toggle").click(function () {
+        $("#nav-menu").toggleClass('menu-open');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    $(".btn-ancla").click(function () {
+        $("#nav-menu").removeClass('menu-open');
+    });
 });

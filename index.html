@@ -25,11 +25,11 @@
                 </span>
             </div>
             <div class="topbar-social">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
-                <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                <a href="#" class="btn-ancla"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="btn-ancla"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="btn-ancla"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="btn-ancla"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#" class="btn-ancla"><i class="fa-brands fa-dribbble"></i></a>
             </div>
             <div class="topbar-auth">
                 <a href="#">
@@ -54,15 +54,18 @@
                     <img src="assets/img/logo.png" alt="logo">
                 </div>
 
-                <nav class="header-nav">
-                    <ul>
-                        <li><a href="#hero">HOME</a></li>
-                        <li><a href="#about">ABOUT US</a></li>
-                        <li><a href="#service">SERVICE</a></li>
-                        <li><a href="#projects">PAGES</a></li>
-                        <li><a href="#team">TEAM</a></li>
-                        <li><a href="#blog">BLOG</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+                <nav class="header-nav" aria-label="Menú principal">
+                    <button id="menu-toggle" class="nav-toggle" aria-label="Abrir menú">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul id="nav-menu" class="nav-list">
+                        <li><a class="btn-ancla" href="#hero">HOME</a></li>
+                        <li><a class="btn-ancla" href="#about">ABOUT US</a></li>
+                        <li><a class="btn-ancla" href="#service">SERVICE</a></li>
+                        <li><a class="btn-ancla" href="#projects">PAGES</a></li>
+                        <li><a class="btn-ancla" href="#team">TEAM</a></li>
+                        <li><a class="btn-ancla" href="#blog">BLOG</a></li>
+                        <li><a class="btn-ancla" href="#contact">CONTACT</a></li>
                     </ul>
                     <span>
                         <a href="#">
@@ -907,6 +910,10 @@
             </div>
         </div>
     </div>
+
+    <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.55/responsiveslides.min.js"></script>

@@ -160,6 +160,17 @@ h6 {
     letter-spacing: 1px;
 }
 
+.nav-toggle {
+    display: none;
+    font-size: 3.0rem;
+    cursor: pointer;
+    color: var(--text-accent);
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 101;
+}
+
 .header-nav ul {
     list-style: none;
     display: flex;
@@ -1738,6 +1749,34 @@ h6 {
     color: var(--primary-color);
 }
 
+/* Botón para subir */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 38px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: var(--text-inverse);
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-top-btn:hover {
+    background: var(--secondary-color);
+}
+
+.scroll-top-btn.show {
+    display: flex;
+}
+
 /* Media Query para 480px */
 @media (max-width: 480px) {
     .topbar {
@@ -1746,13 +1785,71 @@ h6 {
 
     .header {
         padding: 20px 15px;
+        position: relative;
     }
 
     .header-logo img {
         width: 120px;
     }
 
+    .nav-toggle {
+        display: block;
+        font-size: 28px;
+    }
+
+    .nav-toggle i {
+        color: var(--text-inverse);
+    }
+
+    .header {
+        position: relative;
+        background-color: var(--primary-color);
+    }
+
     .header-nav ul {
+        position: absolute;
+        flex-direction: column;
+        top: calc(100%);
+        left: -100%;
+        width: 100%;
+        background: var(--background-color);
+        color: var(--text-inverse);
+        padding: 20px;
+        list-style: none;
+        gap: 0;
+        z-index: 100;
+        transition: all 0.5s linear;
+        margin: 0;
+    }
+
+    .header-nav ul li {
+        padding: 5px 0;
+        border-bottom: 1px solid var(--text-secondary);
+    }
+
+    .header-nav ul li a {
+        color: var(--text-primary);
+    }
+
+    .header-nav ul li a:hover {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .header-nav ul li a.active {
+        color: var(--text-accent);
+    }
+
+    .header-nav ul.menu-open {
+        left: 0;
+        transition: all 0.5s linear;
+    }
+
+    .header-nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .header-nav span {
         display: none;
     }
 
