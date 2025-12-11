@@ -144,4 +144,26 @@ $(function () {
     $(".btn-ancla").click(function () {
         $("#nav-menu").removeClass('menu-open');
     });
+
+    // Accordion FAQ
+    const $accordionItems = $(".accordion-item");
+
+    if ($accordionItems.length) {
+        $(".accordion-title").on("click", function () {
+            const $title = $(this);
+            const $content = $title.next(".accordion-content");
+
+            if (!$content.is(":visible")) {
+                $(".accordion-content").slideUp(200);
+                $(".accordion-title").removeClass("accordion-open");
+                $(".accordion-icon i").removeClass("fa-minus").addClass("fa-plus");
+            }
+
+            $title.toggleClass("accordion-open");
+            $content.stop(true, true).slideToggle(200);
+
+            const $icon = $title.find(".accordion-icon i");
+            $icon.toggleClass("fa-plus fa-minus");
+        });
+    }
 });

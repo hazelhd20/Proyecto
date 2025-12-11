@@ -1422,6 +1422,137 @@ h6 {
     pointer-events: auto;
 }
 
+.faq {
+    padding: 100px 20px;
+    background-color: var(--background-color);
+}
+
+.faq-container {
+    text-align: center;
+}
+
+.faq-content {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.faq-highlight {
+    background-color: var(--secondary-color);
+    color: var(--text-inverse);
+    padding: 28px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.faq-highlight h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-inverse);
+}
+
+.faq-highlight p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-inverse-secondary);
+    margin-bottom: 15px;
+}
+
+.faq-highlight ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.faq-highlight li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text-inverse);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.faq-highlight li i {
+    color: var(--primary-color);
+    margin-top: 2px;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.accordion-item {
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.accordion-title {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 16px 18px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.accordion-title:hover {
+    color: var(--primary-color);
+}
+
+.accordion-title.accordion-open {
+    background-color: rgba(255, 167, 0, 0.08);
+    color: var(--secondary-color);
+}
+
+.accordion-icon {
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.accordion-title.accordion-open .accordion-icon {
+    background-color: var(--primary-color);
+    color: var(--text-inverse);
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    display: none;
+    padding: 0 18px 18px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    border-top: 1px solid #f0f0f0;
+}
+
 .contact-section {
     background-color: var(--background-color-secondary);
     padding: 100px 20px;
@@ -2123,6 +2254,27 @@ h6 {
     .blog-carousel-wrapper .arrows-container {
         left: -20px;
         right: -20px;
+    }
+
+    .faq {
+        padding: 100px 50px;
+    }
+
+    .faq-content {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-highlight {
+        padding: 22px;
+    }
+
+    .accordion-title {
+        font-size: 15px;
+    }
+
+    .accordion-icon {
+        width: 30px;
+        height: 30px;
     }
 
     .section-header h2 {
