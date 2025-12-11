@@ -259,7 +259,7 @@
                     <img src="assets/img/video-image.jpg" alt="video intro">
                 </figure>
                 <div class="video-intro-content">
-                    <a class="btn btn-circle" href="#"><i class="fa fa-play-circle"></i></a>
+                    <a class="btn btn-circle" href="#" id="videoBtn"><i class="fa fa-play-circle"></i></a>
                     <h2>See Our Introduction</h2>
                 </div>
             </div>
@@ -892,6 +892,19 @@
                 <a href="#service">Our Service</a>
                 <a href="#contact">Contact</a>
             </nav>
+        </div>
+    </div>
+
+    <!-- Modal de Video -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-overlay"></div>
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="closeVideoModal">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="video-modal-wrapper">
+                <iframe id="videoIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
